@@ -10,6 +10,9 @@ export default defineConfig(({ mode }) => {
     base: '/Ebook/', 
     
     plugins: [react(), tailwindcss()],
+    build: {
+      outDir: 'docs',
+    },
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
